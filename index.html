@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Harvester Service</title>
+	<link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="popup.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script defer type="module" src="submit.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="title" class="title">
+       Harvester Service For Farmer's
+    </div>
+    <p id="formValidation" style="color: red;"></p>
+    <br>
+    <form  id="registerationform" class="form">
+       <!-- <div id="error"></div> -->
+       <div class="inputContainer">
+          <label for="name">Name of the Farmer</label>
+          <input type="text"  id='farmerName' name= 'name' class="input" required autofocus>
+       </div>  
+       <div class="inputContainer">
+            <label for='email'>Email Address</label>
+            <input id="email" name="email" type="email" required class="input" required autofocus>
+        </div>
+        <div class="inputContainer">
+          <label>Address</label>
+          <textarea class="textarea" type="text" id="address" required autofocus></textarea>
+       </div> 
+       <div class="inputContainer">
+            <label for="phone">Contact Number</label>
+            <input type="text" class="input" id="phone" required autofocus>
+            <!-- <input id="phone" name="phone" type="tel"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+            placeholder="999-999-9999" class="input"> -->
+        </div> 
+
+      <div class="inputContainer">
+          <label>Zip / Area Code</label>
+          <input type="text" class="input"  id="pincode" required autofocus>
+       </div> 
+       <!-- <div class="inputContainer">
+        <label for='password'>Password</label>
+        <input id="password" name="password" type="password" required class="input">
+    </div>    -->
+      <!-- <div class="inputContainer terms">
+          <label class="check">
+            <input type="checkbox" id="termscheck" required>
+            <span class="checkmark"></span>
+          </label>
+          <p>I agree, the above information provided by me is correct.</p>
+       </div>  -->
+      <div class="inputContainer">
+        <button id="reset" class="resetbtn">Reset</button>
+        <input type="submit" value="Submit" id="submitbtn" class="btn">
+      </div>
+    </form>
+
+
+<!-- The Modal -->
+<div id="displayDetailsId" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div>
+      <p id="postDetails" class="postDetails"></p> <br>
+      <p id="errorMessage" class="errorMessage"></p>
+      <p id="postName" class="postName"></p>
+      <p id="postDeliveryStatus" class="DeliveryStatus"></p>
+      <p id="postDistrict" class="postDistrict"></p>
+      <p id="postCircle" class="postCircle"></p>
+      <p id="postCountry" class="postCountry"></p>
+    </div>  
+  </div>
+</div>
+
+
+</div> 
+</div>	
+</body>
+</html>
+    
